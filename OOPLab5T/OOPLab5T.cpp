@@ -1,24 +1,36 @@
-﻿// OOPLab5T.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-
-#include <iostream>
-
-// Ваші файли загловки 
-//
+﻿#include <iostream>
 #include "Lab5Exmaple.h"
 int main()
 {
-    std::cout << " Lab #5  !\n";
-    //  Код виконання завдань
-    //  Головне меню завдань
-    //  Функції та класи можуть знаходитись в інших файлах проекту
+    std::cout << " Lab #5 \n";
 
-    int chain = 1;
-    if (chain == 1) chain = mainExample1();
-    if (chain == 2) chain = mainExample2();
-    if (chain == 3) chain = mainExample3();
-    if (chain == 4) chain = mainExample4();
-    if (chain == 5) chain = mainExample5();
+    char Choice = 'n';
+    do {
+        setlocale(LC_CTYPE, "ukr");
+        std::cout << " Задача 1.3 (1)\n";
+        std::cout << " Задача 2.3 (2)\n";
+        std::cout << " Задача 3.3 (3)\n";
+        std::cout << " Вихiд. (q)\n";
+        std::cin >> Choice;
+
+        switch (Choice) {
+
+        case '1': {
+            Choice = Exrcise1Main();
+            break;
+        }
+        case '2': {
+            Choice = Exrcise2Main();
+            break;
+        }
+        case '3': {
+            Choice = Exrcise3Main();
+            break;
+        }
+        default:
+            std::cout << " ???  Choice {1,2,3 or q}  \n";
+        }
+
+    } while (Choice != 'q');
 
 }

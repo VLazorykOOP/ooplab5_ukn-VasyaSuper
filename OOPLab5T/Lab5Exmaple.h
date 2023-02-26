@@ -3,11 +3,10 @@
 #include <string>
 #include <sstream>
 #include <windows.h>
-int mainExample1();
-int mainExample2();
-int mainExample3();
-int mainExample4();
-int mainExample5();
+int Exrcise1Main();
+int Exrcise2Main();
+int Exrcise3Main();
+
 using namespace std;
 // 
 class ObjInner {
